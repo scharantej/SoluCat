@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ service.name }}</title>
+</head>
+<body>
+<h1>{{ service.name }}</h1>
+<p>{{ service.description }}</p>
+<h2>Offerings</h2>
+<ul>
+{% for offering in service.offerings %}
+<li>{{ offering }}</li>
+{% endfor %}
+</ul>
+<h2>Pricing</h2>
+<p>{{ service.pricing }}</p>
+</body>
+</html>
+
+
