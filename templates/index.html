@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Solution Catalog</title>
+</head>
+<body>
+<h1>Solution Catalog</h1>
+<form action="/filter" method="post">
+<label for="category">Category:</label>
+<select name="category">
+<option value="">All</option>
+<option value="Consulting">Consulting</option>
+<option value="Development">Development</option>
+<option value="Training">Training</option>
+</select>
+<label for="keyword">Keyword:</label>
+<input type="text" name="keyword">
+<input type="submit" value="Filter">
+</form>
+<ul>
+{% for service in services %}
+<li><a href="/service/{{ service.id }}">{{ service.name }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
